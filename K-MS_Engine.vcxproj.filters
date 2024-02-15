@@ -2,5 +2,57 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Engine\Base\WinAPIManager.cpp">
+      <Filter>Engine\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Math\Vector2.cpp">
+      <Filter>Engine\Math\Vector2</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Math\Vector3.cpp">
+      <Filter>Engine\Math\Vector3</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Math\Matrix4x4.cpp">
+      <Filter>Engine\Math\Matrix4x4</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="App">
+      <UniqueIdentifier>{2b28481d-eda5-483a-b5e0-d2a062bb9b69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{83c3d6ad-b171-4c73-a130-db4e9a206a5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Externals">
+      <UniqueIdentifier>{bed6e9f3-f22e-4efd-8d4f-000ce53fb6c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Base">
+      <UniqueIdentifier>{9ff8dcbf-1dc9-4df3-a637-1e876fbf60b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Math">
+      <UniqueIdentifier>{e16554a0-d00a-4991-8f13-d95314bb1da6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Math\Vector2">
+      <UniqueIdentifier>{eea31acf-438b-49c0-a7e9-f220b9b9a225}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Math\Vector3">
+      <UniqueIdentifier>{8627efba-d85f-4689-a490-2d69b1176150}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Math\Matrix4x4">
+      <UniqueIdentifier>{eddfc34d-0b93-4f52-8885-d7c7ce14cb72}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Engine\Base\WinAPIManager.h">
+      <Filter>Engine\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Math\Vector2.h">
+      <Filter>Engine\Math\Vector2</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Math\Vector3.h">
+      <Filter>Engine\Math\Vector3</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Math\Matrix4x4.h">
+      <Filter>Engine\Math\Matrix4x4</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
