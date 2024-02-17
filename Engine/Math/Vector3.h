@@ -1,5 +1,8 @@
 #pragma once
 
+// クラスの前方宣言
+class Matrix4x4;
+
 /// <summary>
 /// 3次元ベクトルクラス
 /// </summary>
@@ -148,6 +151,19 @@ public: // 演算子のオーバーロード
 	/// <param name="v">右辺値</param>
 	/// <returns>一致 or 不一致</returns>
 	bool operator!=(const Vector3& v) const noexcept;
+
+	/// <summary>
+	/// ワールド座標変換
+	/// </summary>
+	/// <param name="mat">変換する行列</param>
+	/// <returns>変換後ベクトル</returns>
+	Vector3 operator*(const Matrix4x4& mat) const;
+	/// <summary>
+	/// ワールド座標変換
+	/// </summary>
+	/// <param name="mat">変換する行列</param>
+	/// <returns>変換後ベクトル</returns>
+	Vector3& operator*=(const Matrix4x4& mat);
 
 public: // メンバ関数
 

@@ -1,5 +1,7 @@
 #include "Vector3.h"
+#include "Matrix4x4.h"
 #include <cmath>
+#include <cassert>
 
 Vector3::Vector3() noexcept
 {
@@ -205,6 +207,36 @@ bool Vector3::operator!=(const Vector3& v) const noexcept
 {
 	// 値の一致を調べる
 	return this->x != v.x && this->y != v.y && this->z != v.z;
+}
+
+Vector3 Vector3::operator*(const Matrix4x4& mat) const
+{
+	// 結果格納用
+	Vector3 result;
+
+	// 生成処理
+	result.x = (this->x * mat.m[0][0]) + (this->y * mat.m[1][0]) + (this->z * mat.m[2][0]) + (1.0f * mat.m[3][0]);
+	result.y = (this->x * mat.m[0][1]) + (this->y * mat.m[1][1]) + (this->z * mat.m[2][1]) + (1.0f * mat.m[3][1]);
+	result.z = (this->x * mat.m[0][2]) + (this->y * mat.m[1][2]) + (this->z * mat.m[2][2]) + (1.0f * mat.m[3][2]);
+	float w = (this->x * mat.m[0][3]) + (this->y * mat.m[1][3]) + (this->z * mat.m[2][3]) + (1.0f * mat.m[3][3]);
+
+	assert(w != 0.0f);
+
+	result.x /= w;
+	result.y /= w;
+	result.z /= w;
+
+	// 生成したベクトルを返す
+	return result;
+}
+
+Vector3& Vector3::operator*=(const Matrix4x4& mat)
+{
+	// ベクトルを行列を元に変換する
+	*this = *this * mat;
+
+	// 計算結果を返す
+	return *this;
 }
 
 float Vector3::Dot(const Vector3& v) const noexcept
