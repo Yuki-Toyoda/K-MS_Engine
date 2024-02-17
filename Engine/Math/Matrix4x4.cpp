@@ -637,7 +637,7 @@ Matrix4x4 Matrix4x4::MakePerspectiveFov(const float& fovY, const float& aspectRa
 	Matrix4x4 result;
 
 	// 行列生成
-	result.MakePerspectiveFov(fovY, aspectRatio, nearClip, farClip);
+	result.PerspectiveFov(fovY, aspectRatio, nearClip, farClip);
 
 	// 生成結果を返す
 	return result;
