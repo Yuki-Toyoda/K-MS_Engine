@@ -85,6 +85,31 @@
     <ClCompile Include="Engine\Log\DebugLog.cpp">
       <Filter>Engine\Log</Filter>
     </ClCompile>
+    <ClCompile Include="Engine\Audio\Audio.cpp">
+      <Filter>Engine\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Primitive\IPrimitive.cpp">
+      <Filter>Engine\Primitive</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Primitive\PrimitiveManager.cpp">
+      <Filter>Engine\Primitive</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Primitive\2d\BillboardPlane.cpp">
+      <Filter>Engine\Primitive\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Primitive\2d\Plane.cpp">
+      <Filter>Engine\Primitive\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Primitive\3d\Mesh.cpp">
+      <Filter>Engine\Primitive\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Primitive\3d\MeshManager.cpp">
+      <Filter>Engine\Primitive\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Transform\WorldTransform.cpp">
+      <Filter>Engine\Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Math\Vector4.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="App">
@@ -131,6 +156,21 @@
     </Filter>
     <Filter Include="Engine\Log">
       <UniqueIdentifier>{b6178831-dbd6-44f7-90ee-b552ee9f932a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Audio">
+      <UniqueIdentifier>{7522c32f-1035-4060-bb53-98f4c0937be9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Primitive">
+      <UniqueIdentifier>{9510c2be-6881-4856-b4f6-47122e5b150f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Primitive\2d">
+      <UniqueIdentifier>{90f24d25-ba27-4e7e-b628-4894849b85fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Primitive\3d">
+      <UniqueIdentifier>{1756bf13-59ef-4f95-ab9b-5afb4c932786}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Transform">
+      <UniqueIdentifier>{ffc8e636-fb72-4cae-a24b-0510c572730c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -221,6 +261,31 @@
     <ClInclude Include="Engine\Log\DebugLog.h">
       <Filter>Engine\Log</Filter>
     </ClInclude>
+    <ClInclude Include="Engine\Audio\Audio.h">
+      <Filter>Engine\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Primitive\IPrimitive.h">
+      <Filter>Engine\Primitive</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Primitive\PrimitiveManager.h">
+      <Filter>Engine\Primitive</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Primitive\2d\BillboardPlane.h">
+      <Filter>Engine\Primitive\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Primitive\2d\Plane.h">
+      <Filter>Engine\Primitive\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Primitive\3d\Mesh.h">
+      <Filter>Engine\Primitive\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Primitive\3d\MeshManager.h">
+      <Filter>Engine\Primitive\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Transform\WorldTransform.h">
+      <Filter>Engine\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Math\Vector4.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Externals\imgui\.editorconfig">

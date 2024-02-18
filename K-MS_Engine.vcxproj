@@ -81,6 +81,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Engine\Audio\Audio.cpp" />
     <ClCompile Include="Engine\Log\DebugLog.cpp" />
     <ClCompile Include="Engine\Base\Command\ICommand.cpp" />
     <ClCompile Include="Engine\Base\Command\CommandManager.cpp" />
@@ -95,6 +96,12 @@
     <ClCompile Include="Engine\Base\DirectXCommon.cpp" />
     <ClCompile Include="Engine\Base\PSO\PSO.cpp" />
     <ClCompile Include="Engine\Input\Input.cpp" />
+    <ClCompile Include="Engine\Primitive\2d\BillboardPlane.cpp" />
+    <ClCompile Include="Engine\Primitive\2d\Plane.cpp" />
+    <ClCompile Include="Engine\Primitive\3d\Mesh.cpp" />
+    <ClCompile Include="Engine\Primitive\3d\MeshManager.cpp" />
+    <ClCompile Include="Engine\Primitive\IPrimitive.cpp" />
+    <ClCompile Include="Engine\Primitive\PrimitiveManager.cpp" />
     <ClCompile Include="Externals\imgui\imgui.cpp" />
     <ClCompile Include="Externals\imgui\ImGuiManager.cpp" />
     <ClCompile Include="Externals\imgui\imgui_demo.cpp" />
@@ -109,8 +116,11 @@
     <ClCompile Include="Engine\Math\Vector2.cpp" />
     <ClCompile Include="Engine\Math\Vector3.cpp" />
     <ClCompile Include="Engine\Math\Matrix4x4.cpp" />
+    <ClCompile Include="Engine\Transform\WorldTransform.cpp" />
+    <ClCompile Include="Engine\Math\Vector4.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Engine\Audio\Audio.h" />
     <ClInclude Include="Engine\Log\DebugLog.h" />
     <ClInclude Include="Engine\Base\Command\ICommand.h" />
     <ClInclude Include="Engine\Base\Command\CommandManager.h" />
@@ -130,6 +140,12 @@
     <ClInclude Include="Engine\Math\Vector2.h" />
     <ClInclude Include="Engine\Math\Vector3.h" />
     <ClInclude Include="Engine\Math\Matrix4x4.h" />
+    <ClInclude Include="Engine\Primitive\2d\BillboardPlane.h" />
+    <ClInclude Include="Engine\Primitive\2d\Plane.h" />
+    <ClInclude Include="Engine\Primitive\3d\Mesh.h" />
+    <ClInclude Include="Engine\Primitive\3d\MeshManager.h" />
+    <ClInclude Include="Engine\Primitive\IPrimitive.h" />
+    <ClInclude Include="Engine\Primitive\PrimitiveManager.h" />
     <ClInclude Include="Externals\imgui\imconfig.h" />
     <ClInclude Include="Externals\imgui\imgui.h" />
     <ClInclude Include="Externals\imgui\ImGuiManager.h" />
@@ -140,6 +156,8 @@
     <ClInclude Include="Externals\imgui\imstb_textedit.h" />
     <ClInclude Include="Externals\imgui\imstb_truetype.h" />
     <ClInclude Include="Engine\FrameWork.h" />
+    <ClInclude Include="Engine\Transform\WorldTransform.h" />
+    <ClInclude Include="Engine\Math\Vector4.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Externals\imgui\.editorconfig" />
@@ -148,6 +166,11 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="Externals\imgui\LICENSE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Externals\DirectXTex\DirectXTex_Desktop_2022_Win10.vcxproj">
+      <Project>{371b9fa9-4c90-4ac6-a123-aced756d6c77}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

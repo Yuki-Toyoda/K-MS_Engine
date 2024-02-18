@@ -189,7 +189,7 @@ void CommandManager::SetHeaps(RTV* rtv, SRV* srv, DSV* dsv, std::wstring vs, std
 		// リソースの生成を行う
 		if (i == 1) {
 			// パーティクルのみAddで生成
-			commands_[i]->Init(device_, dxc_.get(), rootSignature_.Get(), buffer, vs, ps, BasePrimitive::kBlendAdd); // 初期化
+			commands_[i]->Init(device_, dxc_.get(), rootSignature_.Get(), buffer, vs, ps, IPrimitive::kBlendAdd); // 初期化
 		}
 		else {
 			commands_[i]->Init(device_, dxc_.get(), rootSignature_.Get(), buffer, vs, ps); // 初期化
@@ -208,7 +208,7 @@ Matrix4x4* const CommandManager::GetViewProjection() const {
 	return viewProjectionBuffer_->mat;
 }
 
-void CommandManager::SetDrawData(BasePrimitive* primitive)
+void CommandManager::SetDrawData(IPrimitive* primitive)
 {
 	// いろいろ最大数を超えていないかチェック
 	assert(commands_[(int)primitive->primitiveType_]->indexBuffer_->usedCount < commands_[(int)primitive->primitiveType_]->kMaxIndex); // インデックス情報

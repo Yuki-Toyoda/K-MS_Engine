@@ -59,7 +59,7 @@ public: // アクセッサ等
 	/// 描画データ登録関数
 	/// </summary>
 	/// <param name="primitive">頂点データ</param>
-	void SetDrawData(BasePrimitive* primitive);
+	void SetDrawData(IPrimitive* primitive);
 
 	/// <summary>
 	/// コマンドキューのゲッター

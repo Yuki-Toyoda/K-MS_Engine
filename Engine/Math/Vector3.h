@@ -26,7 +26,7 @@ public: // コンストラクタ等
 	/// <summary>
 	/// コンストラクタ
 	/// </summary>
-	/// <param name="v">他の2次元ベクトル</param>
+	/// <param name="v">他の3次元ベクトル</param>
 	Vector3(const Vector3& v) noexcept;
 
 	// 既定のデストラクタを使用する
