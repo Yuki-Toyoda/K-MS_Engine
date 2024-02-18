@@ -81,6 +81,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Engine\Base\Command\ICommand.cpp" />
+    <ClCompile Include="Engine\Base\Command\CommandManager.cpp" />
+    <ClCompile Include="Engine\Base\Command\MainCommand.cpp" />
+    <ClCompile Include="Engine\Base\Command\ParticleCommand.cpp" />
+    <ClCompile Include="Engine\Base\Command\SpriteCommand.cpp" />
+    <ClCompile Include="Engine\Base\DescriptorHeaps\IDescriptorHeap.cpp" />
+    <ClCompile Include="Engine\Base\DescriptorHeaps\DSV.cpp" />
+    <ClCompile Include="Engine\Base\DescriptorHeaps\RTV.cpp" />
+    <ClCompile Include="Engine\Base\DescriptorHeaps\SRV.cpp" />
+    <ClCompile Include="Engine\Base\Device\DirectXDevice.cpp" />
+    <ClCompile Include="Engine\Base\DirectXCommon.cpp" />
+    <ClCompile Include="Engine\Base\PSO\PSO.cpp" />
+    <ClCompile Include="Engine\Input\Input.cpp" />
+    <ClCompile Include="Externals\imgui\imgui.cpp" />
+    <ClCompile Include="Externals\imgui\ImGuiManager.cpp" />
+    <ClCompile Include="Externals\imgui\imgui_demo.cpp" />
+    <ClCompile Include="Externals\imgui\imgui_draw.cpp" />
+    <ClCompile Include="Externals\imgui\imgui_impl_dx12.cpp" />
+    <ClCompile Include="Externals\imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="Externals\imgui\imgui_tables.cpp" />
+    <ClCompile Include="Externals\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="Engine\FrameWork.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Engine\Base\WinAPIManager.cpp" />
     <ClCompile Include="Engine\Math\Vector2.cpp" />
@@ -88,10 +110,41 @@
     <ClCompile Include="Engine\Math\Matrix4x4.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Engine\Base\Command\ICommand.h" />
+    <ClInclude Include="Engine\Base\Command\CommandManager.h" />
+    <ClInclude Include="Engine\Base\Command\MainCommand.h" />
+    <ClInclude Include="Engine\Base\Command\ParticleCommand.h" />
+    <ClInclude Include="Engine\Base\Command\SpriteCommand.h" />
+    <ClInclude Include="Engine\Base\DescriptorHeaps\IDescriptorHeap.h" />
+    <ClInclude Include="Engine\Base\DescriptorHeaps\DSV.h" />
+    <ClInclude Include="Engine\Base\DescriptorHeaps\RTV.h" />
+    <ClInclude Include="Engine\Base\DescriptorHeaps\SRV.h" />
+    <ClInclude Include="Engine\Base\Device\DirectXDevice.h" />
+    <ClInclude Include="Engine\Base\DirectXCommon.h" />
+    <ClInclude Include="Engine\Base\PSO\PSO.h" />
     <ClInclude Include="Engine\Base\WinAPIManager.h" />
+    <ClInclude Include="Engine\Input\Input.h" />
     <ClInclude Include="Engine\Math\Vector2.h" />
     <ClInclude Include="Engine\Math\Vector3.h" />
     <ClInclude Include="Engine\Math\Matrix4x4.h" />
+    <ClInclude Include="Externals\imgui\imconfig.h" />
+    <ClInclude Include="Externals\imgui\imgui.h" />
+    <ClInclude Include="Externals\imgui\ImGuiManager.h" />
+    <ClInclude Include="Externals\imgui\imgui_impl_dx12.h" />
+    <ClInclude Include="Externals\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="Externals\imgui\imgui_internal.h" />
+    <ClInclude Include="Externals\imgui\imstb_rectpack.h" />
+    <ClInclude Include="Externals\imgui\imstb_textedit.h" />
+    <ClInclude Include="Externals\imgui\imstb_truetype.h" />
+    <ClInclude Include="Engine\FrameWork.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Externals\imgui\.editorconfig" />
+    <None Include="Externals\imgui\.gitattributes" />
+    <None Include="Externals\imgui\.gitignore" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Externals\imgui\LICENSE.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

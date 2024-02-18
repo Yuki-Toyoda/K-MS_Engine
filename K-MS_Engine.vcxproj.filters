@@ -14,6 +14,72 @@
     <ClCompile Include="Engine\Math\Matrix4x4.cpp">
       <Filter>Engine\Math\Matrix4x4</Filter>
     </ClCompile>
+    <ClCompile Include="Externals\imgui\imgui.cpp">
+      <Filter>Externals\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Externals\imgui\imgui_demo.cpp">
+      <Filter>Externals\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Externals\imgui\imgui_draw.cpp">
+      <Filter>Externals\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Externals\imgui\imgui_impl_dx12.cpp">
+      <Filter>Externals\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Externals\imgui\imgui_impl_win32.cpp">
+      <Filter>Externals\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Externals\imgui\imgui_tables.cpp">
+      <Filter>Externals\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Externals\imgui\imgui_widgets.cpp">
+      <Filter>Externals\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Externals\imgui\ImGuiManager.cpp">
+      <Filter>Externals\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Input\Input.cpp">
+      <Filter>Engine\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\FrameWork.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Base\DirectXCommon.cpp">
+      <Filter>Engine\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Base\Command\ICommand.cpp">
+      <Filter>Engine\Base\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Base\Command\CommandManager.cpp">
+      <Filter>Engine\Base\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Base\Command\MainCommand.cpp">
+      <Filter>Engine\Base\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Base\Command\ParticleCommand.cpp">
+      <Filter>Engine\Base\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Base\Command\SpriteCommand.cpp">
+      <Filter>Engine\Base\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Base\DescriptorHeaps\IDescriptorHeap.cpp">
+      <Filter>Engine\Base\DescriptorHeaps</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Base\DescriptorHeaps\DSV.cpp">
+      <Filter>Engine\Base\DescriptorHeaps</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Base\DescriptorHeaps\RTV.cpp">
+      <Filter>Engine\Base\DescriptorHeaps</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Base\DescriptorHeaps\SRV.cpp">
+      <Filter>Engine\Base\DescriptorHeaps</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Base\Device\DirectXDevice.cpp">
+      <Filter>Engine\Base\Device</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Base\PSO\PSO.cpp">
+      <Filter>Engine\Base\PSO</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="App">
@@ -40,6 +106,24 @@
     <Filter Include="Engine\Math\Matrix4x4">
       <UniqueIdentifier>{eddfc34d-0b93-4f52-8885-d7c7ce14cb72}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Externals\ImGui">
+      <UniqueIdentifier>{92ca0a25-7f0e-4f0f-af6b-8b914c20afe2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Input">
+      <UniqueIdentifier>{5738bf92-b2a9-4396-9ebe-4336cb04b943}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Base\Command">
+      <UniqueIdentifier>{bf0b500c-9184-43d4-b843-a4a7a5308d46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Base\DescriptorHeaps">
+      <UniqueIdentifier>{dc7945bc-ae80-4b23-9ac6-acf5227fd8a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Base\Device">
+      <UniqueIdentifier>{d9dcb139-b528-467f-89c8-30ad7de7ab68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Base\PSO">
+      <UniqueIdentifier>{1b6cfc2f-0eca-4f0b-a40f-cd04ef69f660}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Base\WinAPIManager.h">
@@ -54,5 +138,90 @@
     <ClInclude Include="Engine\Math\Matrix4x4.h">
       <Filter>Engine\Math\Matrix4x4</Filter>
     </ClInclude>
+    <ClInclude Include="Externals\imgui\imconfig.h">
+      <Filter>Externals\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Externals\imgui\imgui.h">
+      <Filter>Externals\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Externals\imgui\imgui_impl_dx12.h">
+      <Filter>Externals\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Externals\imgui\imgui_impl_win32.h">
+      <Filter>Externals\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Externals\imgui\imgui_internal.h">
+      <Filter>Externals\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Externals\imgui\ImGuiManager.h">
+      <Filter>Externals\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Externals\imgui\imstb_rectpack.h">
+      <Filter>Externals\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Externals\imgui\imstb_textedit.h">
+      <Filter>Externals\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Externals\imgui\imstb_truetype.h">
+      <Filter>Externals\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Input\Input.h">
+      <Filter>Engine\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\FrameWork.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Base\DirectXCommon.h">
+      <Filter>Engine\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Base\Command\ICommand.h">
+      <Filter>Engine\Base\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Base\Command\CommandManager.h">
+      <Filter>Engine\Base\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Base\Command\MainCommand.h">
+      <Filter>Engine\Base\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Base\Command\ParticleCommand.h">
+      <Filter>Engine\Base\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Base\Command\SpriteCommand.h">
+      <Filter>Engine\Base\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Base\DescriptorHeaps\IDescriptorHeap.h">
+      <Filter>Engine\Base\DescriptorHeaps</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Base\DescriptorHeaps\DSV.h">
+      <Filter>Engine\Base\DescriptorHeaps</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Base\DescriptorHeaps\RTV.h">
+      <Filter>Engine\Base\DescriptorHeaps</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Base\DescriptorHeaps\SRV.h">
+      <Filter>Engine\Base\DescriptorHeaps</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Base\Device\DirectXDevice.h">
+      <Filter>Engine\Base\Device</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Base\PSO\PSO.h">
+      <Filter>Engine\Base\PSO</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Externals\imgui\.editorconfig">
+      <Filter>Externals\ImGui</Filter>
+    </None>
+    <None Include="Externals\imgui\.gitattributes">
+      <Filter>Externals\ImGui</Filter>
+    </None>
+    <None Include="Externals\imgui\.gitignore">
+      <Filter>Externals\ImGui</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Externals\imgui\LICENSE.txt">
+      <Filter>Externals\ImGui</Filter>
+    </Text>
   </ItemGroup>
 </Project>
