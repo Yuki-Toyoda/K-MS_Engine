@@ -3,8 +3,8 @@
 #include <vector>
 #include <chrono>
 
-#include "WinApp.h"
-#include "../Debug/Debug.h"
+#include "WinAPIManager.h"
+#include "../Log/DebugLog.h"
 #include "Device/DirectXDevice.h"
 #include "DescriptorHeaps/RTV.h"
 #include "DescriptorHeaps/SRV.h"
@@ -30,8 +30,8 @@ public: // メンバ関数
 	/// <param name="win">ウィンドウズアプリケーションクラス</param>
 	/// <param name="backBufferWidth">ウィンドウ横幅</param>
 	/// <param name="backBufferHeight">ウィンドウ縦幅</param>
-	void Init(WinApp* win, 
-		int32_t backBufferWidth = WinApp::kWindowWidth, int32_t backBufferHeight = WinApp::kwindowHeight);
+	void Init(WinAPIManager* win, 
+		int32_t backBufferWidth = WinAPIManager::kWindowWidth, int32_t backBufferHeight = WinAPIManager::kwindowHeight);
 
 	/// <summary>
 	/// 描画
@@ -96,7 +96,7 @@ private: // メンバ関数
 private: // メンバ変数
 
 	// ウィンドウズアプリケーションクラス
-	WinApp* winApp_;
+	WinAPIManager* winApp_;
 
 	// デバイス
 	std::unique_ptr<DirectXDevice> dxDevice_;

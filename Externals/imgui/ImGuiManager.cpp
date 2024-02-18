@@ -9,7 +9,7 @@ ImGuiManager* ImGuiManager::GetImstance()
 	return &instance;
 }
 
-void ImGuiManager::Intialize(WinApp* win, DirectXCommon* dxCommon)
+void ImGuiManager::Intialize(WinAPIManager* win, DirectXCommon* dxCommon)
 {
 	// 引数の値をメンバ変数に代入する
 	dxCommon_ = dxCommon;

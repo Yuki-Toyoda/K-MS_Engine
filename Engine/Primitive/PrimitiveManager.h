@@ -48,7 +48,7 @@ public: // メンバ関数
 	/// </summary>
 	/// <typeparam name="SelectPrimitive">生成する形状</typeparam>
 	/// <returns>形状インスタンス</returns>
-	template <IsBasePrimitive SelectPrimitive>
+	template <IsIPrimitive SelectPrimitive>
 	inline SelectPrimitive* CreateInstance() {
 		// 形状のインスタンス
 		std::unique_ptr<SelectPrimitive> newPrimitive = std::make_unique<SelectPrimitive>(commandManager_);

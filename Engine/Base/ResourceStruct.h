@@ -1,5 +1,5 @@
 #pragma once
-#include "../Primitive/BasePrimitive.h"
+#include "../Primitive/IPrimitive.h"
 
 #pragma region インデックスデータ
 /// <summary>

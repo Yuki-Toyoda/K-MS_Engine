@@ -102,6 +102,9 @@
     <ClCompile Include="Engine\Primitive\3d\MeshManager.cpp" />
     <ClCompile Include="Engine\Primitive\IPrimitive.cpp" />
     <ClCompile Include="Engine\Primitive\PrimitiveManager.cpp" />
+    <ClCompile Include="Engine\Resource\Material\Material.cpp" />
+    <ClCompile Include="Engine\Resource\Texture\Texture.cpp" />
+    <ClCompile Include="Engine\Resource\Texture\TextureManager.cpp" />
     <ClCompile Include="Externals\imgui\imgui.cpp" />
     <ClCompile Include="Externals\imgui\ImGuiManager.cpp" />
     <ClCompile Include="Externals\imgui\imgui_demo.cpp" />
@@ -146,6 +149,9 @@
     <ClInclude Include="Engine\Primitive\3d\MeshManager.h" />
     <ClInclude Include="Engine\Primitive\IPrimitive.h" />
     <ClInclude Include="Engine\Primitive\PrimitiveManager.h" />
+    <ClInclude Include="Engine\Resource\Material\Material.h" />
+    <ClInclude Include="Engine\Resource\Texture\Texture.h" />
+    <ClInclude Include="Engine\Resource\Texture\TextureManager.h" />
     <ClInclude Include="Externals\imgui\imconfig.h" />
     <ClInclude Include="Externals\imgui\imgui.h" />
     <ClInclude Include="Externals\imgui\ImGuiManager.h" />
@@ -160,6 +166,23 @@
     <ClInclude Include="Engine\Math\Vector4.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Engine\Resource\Samples\Box\Box.mtl" />
+    <None Include="Engine\Resource\Samples\cube\cube.mtl" />
+    <None Include="Engine\Resource\Samples\Enemy\Body\MonsterBody.mtl" />
+    <None Include="Engine\Resource\Samples\Leeme\Leeme.mtl" />
+    <None Include="Engine\Resource\Samples\Line\Line.mtl" />
+    <None Include="Engine\Resource\Samples\Plane\Plane.mtl" />
+    <None Include="Engine\Resource\Samples\Player\Body\float_Body.mtl" />
+    <None Include="Engine\Resource\Samples\Player\Head\float_Head.mtl" />
+    <None Include="Engine\Resource\Samples\Player\L_Arm\float_L_arm.mtl" />
+    <None Include="Engine\Resource\Samples\Player\R_Arm\float_R_arm.mtl" />
+    <None Include="Engine\Resource\Samples\Player\Weapon\Weapon.mtl" />
+    <None Include="Engine\Resource\Samples\SkyDome\SkyDome.mtl" />
+    <None Include="Engine\Resource\Samples\Sphere\Sphere.mtl" />
+    <None Include="Engine\Resource\Samples\Stage\Stage.mtl" />
+    <None Include="Engine\Resource\Shader\Object3D.hlsli">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </None>
     <None Include="Externals\imgui\.editorconfig" />
     <None Include="Externals\imgui\.gitattributes" />
     <None Include="Externals\imgui\.gitignore" />
@@ -171,6 +194,51 @@
     <ProjectReference Include="Externals\DirectXTex\DirectXTex_Desktop_2022_Win10.vcxproj">
       <Project>{371b9fa9-4c90-4ac6-a123-aced756d6c77}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Engine\Resource\Samples\Audio\Alarm01.wav" />
+    <Media Include="Engine\Resource\Samples\Audio\SceneTransition.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="Engine\Resource\Samples\Box\Box.obj" />
+    <Object Include="Engine\Resource\Samples\cube\cube.obj" />
+    <Object Include="Engine\Resource\Samples\Enemy\Body\MonsterBody.obj" />
+    <Object Include="Engine\Resource\Samples\Leeme\Leeme.obj" />
+    <Object Include="Engine\Resource\Samples\Line\Line.obj" />
+    <Object Include="Engine\Resource\Samples\Plane\Plane.obj" />
+    <Object Include="Engine\Resource\Samples\Player\Body\float_Body.obj" />
+    <Object Include="Engine\Resource\Samples\Player\Head\float_Head.obj" />
+    <Object Include="Engine\Resource\Samples\Player\L_Arm\float_L_arm.obj" />
+    <Object Include="Engine\Resource\Samples\Player\R_Arm\float_R_arm.obj" />
+    <Object Include="Engine\Resource\Samples\Player\Weapon\Weapon.obj" />
+    <Object Include="Engine\Resource\Samples\SkyDome\SkyDome.obj" />
+    <Object Include="Engine\Resource\Samples\Sphere\Sphere.obj" />
+    <Object Include="Engine\Resource\Samples\Stage\Stage.obj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Engine\Resource\Samples\Box\uvChecker.png" />
+    <Image Include="Engine\Resource\Samples\cube\cube.png" />
+    <Image Include="Engine\Resource\Samples\Enemy\Body\EnemyBodyTex.png" />
+    <Image Include="Engine\Resource\Samples\Player\Body\BodyTex.png" />
+    <Image Include="Engine\Resource\Samples\Player\Head\HeadTex.png" />
+    <Image Include="Engine\Resource\Samples\Player\L_Arm\ArmTex.png" />
+    <Image Include="Engine\Resource\Samples\Player\R_Arm\ArmTex.png" />
+    <Image Include="Engine\Resource\Samples\Player\Weapon\WeaponTex.png" />
+    <Image Include="Engine\Resource\Samples\SkyDome\Sky.png" />
+    <Image Include="Engine\Resource\Samples\Sphere\white2x2.png" />
+    <Image Include="Engine\Resource\Samples\Stage\GroundTex.png" />
+    <Image Include="Engine\Resource\Samples\Texture\AlphabetSheet.png" />
+    <Image Include="Engine\Resource\Samples\Texture\circle.png" />
+    <Image Include="Engine\Resource\Samples\Texture\ColorSample.png" />
+    <Image Include="Engine\Resource\Samples\Texture\NumberSheets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Engine\Resource\Shader\Object3D.PS.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="Engine\Resource\Shader\Object3D.VS.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </FxCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

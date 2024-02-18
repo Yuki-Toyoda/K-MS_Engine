@@ -8,7 +8,7 @@
 extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
 // クラスの前方宣言
-class WinApp;
+class WinAPIManager;
 class DirectXCommon;
 
 /// <summary>
@@ -27,7 +27,7 @@ public: // メンバ関数
 	/// </summary>
 	/// <param name="win">ウィンドウズアプリケーション</param>
 	/// <param name="dxCommon">DirectX12汎用クラス</param>
-	void Intialize(WinApp* win, DirectXCommon* dxCommon);
+	void Intialize(WinAPIManager* win, DirectXCommon* dxCommon);
 
 	/// <summary>
 	/// 終了関数

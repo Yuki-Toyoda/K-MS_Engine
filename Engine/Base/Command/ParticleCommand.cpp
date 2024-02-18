@@ -31,7 +31,7 @@ void ParticleCommand::PreDraw(ID3D12GraphicsCommandList* cmdList)
 	cmdList->SetDescriptorHeaps(1, descriptorHeaps);						 // 取得したヒープをコマンドリストにセット
 
 	// インスタンス取得
-	WinApp* winApp = WinApp::GetInstance();
+	WinAPIManager* winApp = WinAPIManager::GetInstance();
 
 	// ビューポートの設定
 	D3D12_VIEWPORT viewPort = {}; // 空のインスタンス生成

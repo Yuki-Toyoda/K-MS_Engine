@@ -1,6 +1,7 @@
 #pragma once
 #include "../Transform/WorldTransform.h"
 #include "../Math/Vector2.h"
+#include "../Math/Vector4.h"
 #include "../Resource/Texture/Texture.h"
 #include "../Resource/Material/Material.h"
 #include <wrl.h>
@@ -128,7 +129,7 @@ public: // パブリックなメンバ変数
 };
 
 /// <summary>
-/// BasePrimitiveを継承したクラスを選択できるテンプレート
+/// IPrimitiveを継承したクラスを選択できるテンプレート
 /// </summary>
 template <class SelectPrimitive>
-concept IsBasePrimitive = std::is_base_of<IPrimitive, SelectPrimitive>::value;
+concept IsIPrimitive = std::is_base_of<IPrimitive, SelectPrimitive>::value;

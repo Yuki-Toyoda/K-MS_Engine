@@ -11,7 +11,7 @@ DirectXCommon* DirectXCommon::GetInstance() {
 	return &instance;
 }
 
-void DirectXCommon::Init(WinApp* win,
+void DirectXCommon::Init(WinAPIManager* win,
 	int32_t backBufferWidth, int32_t backBufferHeight) {
 
 	// 引数のNULLチェックを行う
@@ -76,7 +76,7 @@ void DirectXCommon::UpdateFixFPS()
 	// 1/60秒ぴったりの時間
 	const std::chrono::microseconds kMinTime(uint64_t(1000000.0f / 60.0f));
 	// 1/60秒よりわずかに短い時間
-	const std::chrono::microseconds kMinCheckTime(uint64_t(1000000.0f / 65.0f));
+	const std::chrono::microseconds kMinCheckTime(uint64_t(1000000.0f / 60.5f));
 
 	// 現在時間の取得
 	std::chrono::steady_clock::time_point now = std::chrono::steady_clock::now();
