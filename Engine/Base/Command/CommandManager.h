@@ -1,6 +1,6 @@
 #pragma once
 #include <vector>
-#include "../../Debug/Debug.h"
+#include "../../Log/DebugLog.h"
 #include "MainCommand.h"
 #include "ParticleCommand.h"
 #include "SpriteCommand.h"

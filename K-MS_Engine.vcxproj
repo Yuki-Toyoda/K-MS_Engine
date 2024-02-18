@@ -81,6 +81,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Engine\Log\DebugLog.cpp" />
     <ClCompile Include="Engine\Base\Command\ICommand.cpp" />
     <ClCompile Include="Engine\Base\Command\CommandManager.cpp" />
     <ClCompile Include="Engine\Base\Command\MainCommand.cpp" />
@@ -110,6 +111,7 @@
     <ClCompile Include="Engine\Math\Matrix4x4.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Engine\Log\DebugLog.h" />
     <ClInclude Include="Engine\Base\Command\ICommand.h" />
     <ClInclude Include="Engine\Base\Command\CommandManager.h" />
     <ClInclude Include="Engine\Base\Command\MainCommand.h" />

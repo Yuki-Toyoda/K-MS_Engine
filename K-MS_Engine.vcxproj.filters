@@ -82,6 +82,9 @@
     <ClCompile Include="Engine\Base\DirectXCommon.cpp">
       <Filter>Engine\Base</Filter>
     </ClCompile>
+    <ClCompile Include="Engine\Log\DebugLog.cpp">
+      <Filter>Engine\Log</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="App">
@@ -125,6 +128,9 @@
     </Filter>
     <Filter Include="Engine\Base\PSO">
       <UniqueIdentifier>{1b6cfc2f-0eca-4f0b-a40f-cd04ef69f660}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Log">
+      <UniqueIdentifier>{b6178831-dbd6-44f7-90ee-b552ee9f932a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -211,6 +217,9 @@
     </ClInclude>
     <ClInclude Include="Engine\Base\DirectXCommon.h">
       <Filter>Engine\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Log\DebugLog.h">
+      <Filter>Engine\Log</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
