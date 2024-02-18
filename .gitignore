@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Engine/Base/Device/DirectXDevice.cpp
+/Engine/Base/Device/DirectXDevice.h
