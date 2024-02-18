@@ -139,7 +139,7 @@ private: // メンバ変数
 
 	// 描画コマンド本体
 	// シャドウマップ等を行うと数が増減する可能性あり
-	std::vector<ICommand*> commands_;
+	std::vector<BaseCommand*> commands_;
 
 	// フェンス
 	Microsoft::WRL::ComPtr<ID3D12Fence> fence_; // 本体

@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="Engine\Base\WinAPIManager.cpp">
       <Filter>Engine\Base</Filter>
     </ClCompile>
@@ -44,9 +43,6 @@
     <ClCompile Include="Engine\FrameWork.cpp">
       <Filter>Engine</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\Base\DirectXCommon.cpp">
-      <Filter>Engine\Base</Filter>
-    </ClCompile>
     <ClCompile Include="Engine\Base\Command\ICommand.cpp">
       <Filter>Engine\Base\Command</Filter>
     </ClCompile>
@@ -65,6 +61,9 @@
     <ClCompile Include="Engine\Base\DescriptorHeaps\IDescriptorHeap.cpp">
       <Filter>Engine\Base\DescriptorHeaps</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Engine\Base</Filter>
+    </ClCompile>
     <ClCompile Include="Engine\Base\DescriptorHeaps\DSV.cpp">
       <Filter>Engine\Base\DescriptorHeaps</Filter>
     </ClCompile>
@@ -79,6 +78,9 @@
     </ClCompile>
     <ClCompile Include="Engine\Base\PSO\PSO.cpp">
       <Filter>Engine\Base\PSO</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Base\DirectXCommon.cpp">
+      <Filter>Engine\Base</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -171,9 +173,6 @@
     <ClInclude Include="Engine\FrameWork.h">
       <Filter>Engine</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\Base\DirectXCommon.h">
-      <Filter>Engine\Base</Filter>
-    </ClInclude>
     <ClInclude Include="Engine\Base\Command\ICommand.h">
       <Filter>Engine\Base\Command</Filter>
     </ClInclude>
@@ -206,6 +205,12 @@
     </ClInclude>
     <ClInclude Include="Engine\Base\PSO\PSO.h">
       <Filter>Engine\Base\PSO</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Base\ResourceStruct.h">
+      <Filter>Engine\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Base\DirectXCommon.h">
+      <Filter>Engine\Base</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
