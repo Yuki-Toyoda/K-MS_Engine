@@ -1,7 +1,5 @@
 #include "PrimitiveManager.h"
 #include "../Base/DirectXCommon.h"
-#include "../GameObject/GameObjectManager.h"
-#include "../GameObject/Core/Camera.h"
 
 PrimitiveManager* PrimitiveManager::GetInstance()
 {

@@ -1,6 +1,6 @@
 #pragma once
 #include "../Device/DirectXDevice.h"
-#include "../../Debug/Debug.h"
+#include "../../Log/DebugLog.h"
 
 #include <cassert>
 #include <string>

@@ -3,7 +3,7 @@
 #include "../DescriptorHeaps/SRV.h"
 #include "../DescriptorHeaps/DSV.h"
 #include "../../Resource/Texture/TextureManager.h"
-#include "../WinApp.h"
+#include "../WinAPIManager.h"
 
 #pragma comment(lib, "d3d12.lib")
 #pragma comment(lib, "dxgi.lib")
@@ -204,7 +204,7 @@ void CommandManager::SetHeaps(RTV* rtv, SRV* srv, DSV* dsv, std::wstring vs, std
 }
 
 Matrix4x4* const CommandManager::GetViewProjection() const {
-	viewProjectionBuffer_->mat[1] = Math::MakeIdentity4x4() * Math::MakeOrthGraphicMatrix(0.0f, 0.0f, (float)WinAPIManager::kWindowWidth, (float)WinAPIManager::kwindowHeight, 0.0f, 100.0f);
+	viewProjectionBuffer_->mat[1] = Matrix4x4::kIdentity * Matrix4x4::MakeOrthGraphic(0.0f, 0.0f, WinAPIManager::GetInstance()->GetClientSize().x, WinAPIManager::GetInstance()->GetClientSize().y, 0.0f, 100.0f);
 	return viewProjectionBuffer_->mat;
 }
 
@@ -390,7 +390,7 @@ void CommandManager::CreateRootSignature()
 	// 生成に失敗した場合
 	if (FAILED(result)) {
 		// ログを出力
-		Debug::Log(reinterpret_cast<char*>(errorBlob->GetBufferPointer()));
+		DebugLog::Log(reinterpret_cast<char*>(errorBlob->GetBufferPointer()));
 		// 停止
 		assert(false);
 	}

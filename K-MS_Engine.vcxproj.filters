@@ -94,9 +94,6 @@
     <ClCompile Include="Engine\Primitive\PrimitiveManager.cpp">
       <Filter>Engine\Primitive</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\Primitive\2d\BillboardPlane.cpp">
-      <Filter>Engine\Primitive\2d</Filter>
-    </ClCompile>
     <ClCompile Include="Engine\Primitive\2d\Plane.cpp">
       <Filter>Engine\Primitive\2d</Filter>
     </ClCompile>
@@ -272,9 +269,6 @@
     </ClInclude>
     <ClInclude Include="Engine\Primitive\PrimitiveManager.h">
       <Filter>Engine\Primitive</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\Primitive\2d\BillboardPlane.h">
-      <Filter>Engine\Primitive\2d</Filter>
     </ClInclude>
     <ClInclude Include="Engine\Primitive\2d\Plane.h">
       <Filter>Engine\Primitive\2d</Filter>

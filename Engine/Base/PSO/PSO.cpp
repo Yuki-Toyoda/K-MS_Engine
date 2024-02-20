@@ -161,7 +161,7 @@ IDxcBlob* PSO::CompileShader(const std::wstring& filePath, const wchar_t* profil
 	HRESULT result = S_FALSE;
 
 	// シェーダーコンパイルの開始をログに出す
-	Debug::Log(Debug::ConvertString(std::format(L"Begin CompileShader, path:{}, profile{}\n", filePath, profile)));
+	DebugLog::Log(DebugLog::ConvertString(std::format(L"Begin CompileShader, path:{}, profile{}\n", filePath, profile)));
 
 	// HLSLファイルを読み込む
 	IDxcBlobEncoding* shaderSource = nullptr;
@@ -204,7 +204,7 @@ IDxcBlob* PSO::CompileShader(const std::wstring& filePath, const wchar_t* profil
 	shaderResult->GetOutput(DXC_OUT_ERRORS, IID_PPV_ARGS(&shaderError), nullptr);
 	if (shaderError != nullptr && shaderError->GetStringLength() != 0) {
 		// ログに警告、エラー情報を出力する
-		Debug::Log(shaderError->GetStringPointer());
+		DebugLog::Log(shaderError->GetStringPointer());
 		// 警告やエラーが出ている場合停止させる
 		assert(false);
 	}
@@ -216,7 +216,7 @@ IDxcBlob* PSO::CompileShader(const std::wstring& filePath, const wchar_t* profil
 	assert(SUCCEEDED(result));
 
 	// 成功したことをログに出力
-	Debug::Log(Debug::ConvertString(std::format(L"Compile Succeeded, path:{}, profile{}\n", filePath, profile)));
+	DebugLog::Log(DebugLog::ConvertString(std::format(L"Compile Succeeded, path:{}, profile{}\n", filePath, profile)));
 
 	// 使わないリソースの解放を行う
 	shaderSource->Release();

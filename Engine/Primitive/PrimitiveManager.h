@@ -1,7 +1,7 @@
 #pragma once
 #include <list>
 #include <memory>
-#include "BasePrimitive.h"
+#include "IPrimitive.h"
 #include "3d/Mesh.h"
 
 // クラスの前方宣言

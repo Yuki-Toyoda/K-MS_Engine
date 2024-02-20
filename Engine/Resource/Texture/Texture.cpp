@@ -17,7 +17,7 @@ void Texture::Load(const std::string& filePath)
 
 	// テクスチャファイルを読み込み
 	DirectX::ScratchImage image{};										   // テクスチャ格納用
-	std::wstring filePathW = Debug::ConvertString(filePath);			   // wString形式に変換
+	std::wstring filePathW = DebugLog::ConvertString(filePath);			   // wString形式に変換
 	result = DirectX::LoadFromWICFile(
 		filePathW.c_str(), DirectX::WIC_FLAGS_FORCE_SRGB, nullptr, image); // テクスチャをCPUで読み込む
 	assert(SUCCEEDED(result));											   // 読み込み確認

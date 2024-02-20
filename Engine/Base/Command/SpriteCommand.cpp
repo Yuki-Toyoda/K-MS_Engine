@@ -1,5 +1,5 @@
 #include "SpriteCommand.h"
-#include "../WinApp.h"
+#include "../WinAPIManager.h"
 #include "../DescriptorHeaps/RTV.h"
 #include "../DescriptorHeaps/SRV.h"
 #include "../DescriptorHeaps/DSV.h"
@@ -36,21 +36,21 @@ void SpriteCommand::PreDraw(ID3D12GraphicsCommandList* cmdList)
 	// ビューポートの設定
 	D3D12_VIEWPORT viewPort = {}; // 空のインスタンス生成
 	// クライアント領域のサイズを取得し画面全体に表示させる
-	viewPort.Width = static_cast<float>(winApp->kWindowWidth);	// ビューポートの横幅設定
-	viewPort.Height = static_cast<float>(winApp->kwindowHeight); // ビューポートの縦幅設定
-	viewPort.TopLeftX = 0.0f;													// ビューポートの左上開始地点x座標
-	viewPort.TopLeftY = 0.0f;													// ビューポートの左上開始地点y座標
-	viewPort.MinDepth = 0.0f;													// ビューポートの最低深度設定
-	viewPort.MaxDepth = 1.0f;													// ビューポートの最高深度設定
-	cmdList->RSSetViewports(1, &viewPort);										// 設定したビューポートをコマンドリストを設定
+	viewPort.Width = winApp->GetWindowSize().x;	 // ビューポートの横幅設定
+	viewPort.Height = winApp->GetWindowSize().y; // ビューポートの縦幅設定
+	viewPort.TopLeftX = 0.0f;					 // ビューポートの左上開始地点x座標
+	viewPort.TopLeftY = 0.0f;					 // ビューポートの左上開始地点y座標
+	viewPort.MinDepth = 0.0f;					 // ビューポートの最低深度設定
+	viewPort.MaxDepth = 1.0f;					 // ビューポートの最高深度設定
+	cmdList->RSSetViewports(1, &viewPort);		 // 設定したビューポートをコマンドリストを設定
 
 	// シザー矩形の設定
 	D3D12_RECT scissorRect = {}; // 空のインスタンス生成
 	// ビューポートと同じように構成
 	scissorRect.left = 0;
-	scissorRect.right = winApp->kWindowWidth;
+	scissorRect.right = static_cast<LONG>(winApp->GetWindowSize().x);
 	scissorRect.top = 0;
-	scissorRect.bottom = winApp->kwindowHeight;
+	scissorRect.bottom = static_cast<LONG>(winApp->GetWindowSize().y);
 	cmdList->RSSetScissorRects(1, &scissorRect); // コマンドリストに生成したシザー矩形をセット
 }
 

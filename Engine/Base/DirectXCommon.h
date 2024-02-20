@@ -28,10 +28,7 @@ public: // メンバ関数
 	/// 初期化処理
 	/// </summary>
 	/// <param name="win">ウィンドウズアプリケーションクラス</param>
-	/// <param name="backBufferWidth">ウィンドウ横幅</param>
-	/// <param name="backBufferHeight">ウィンドウ縦幅</param>
-	void Init(WinAPIManager* win, 
-		int32_t backBufferWidth = WinAPIManager::kWindowWidth, int32_t backBufferHeight = WinAPIManager::kwindowHeight);
+	void Init(WinAPIManager* win);
 
 	/// <summary>
 	/// 描画

@@ -1,6 +1,5 @@
 #pragma once
-#include "../../Math/Math.h"
-#include "../../GameObject/WorldTransform.h"
+#include "../../Transform/WorldTransform.h"
 
 // 描画状態列挙子クラス
 enum class fillMode : bool {

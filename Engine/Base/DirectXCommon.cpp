@@ -11,16 +11,15 @@ DirectXCommon* DirectXCommon::GetInstance() {
 	return &instance;
 }
 
-void DirectXCommon::Init(WinAPIManager* win,
-	int32_t backBufferWidth, int32_t backBufferHeight) {
-
+void DirectXCommon::Init(WinAPIManager* win)
+{
 	// 引数のNULLチェックを行う
 	assert(win);
 
 	// 引数の値をメンバ変数に代入
 	winApp_ = win;
-	backBufferWidth_ = backBufferWidth;
-	backBufferHeight_ = backBufferHeight;
+	backBufferWidth_ = static_cast<int32_t>(winApp_->GetWindowSize().x);
+	backBufferHeight_ = static_cast<int32_t>(winApp_->GetWindowSize().y);
 
 	// デバイスの生成
 	dxDevice_ = std::make_unique<DirectXDevice>(); // インスタンス生成
@@ -44,9 +43,7 @@ void DirectXCommon::Init(WinAPIManager* win,
 
 	// FPS初期化
 	InitializeFixFPS();
-
 }
-
 
 void DirectXCommon::Draw()
 {

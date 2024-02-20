@@ -1,4 +1,4 @@
-#include "BaseCommand.h"
+#include "ICommand.h"
 #include "../DescriptorHeaps/SRV.h"
 
 void ICommand::Init(ID3D12Device* device, DXC* dxc, ID3D12RootSignature* signature, ID3D12Resource* resource, std::wstring vs, std::wstring ps, int32_t blendType)

@@ -1,5 +1,5 @@
 #include "DirectXDevice.h"
-#include "../../Debug/Debug.h"
+#include "../../Log/DebugLog.h"
 #include <cassert>
 
 #pragma comment(lib, "d3d12.lib")
@@ -41,7 +41,7 @@ void DirectXDevice::Init()
 		// ソフトウェアアダプタでなければ採用する
 		if (!(adapterDesc.Flags & DXGI_ADAPTER_FLAG3_SOFTWARE)) {
 			// 採用したアダプターの情報をログに入れて出力する
-			Debug::Log(Debug::ConvertString(std::format(L"use Adapter:{}\n", adapterDesc.Description)));
+			DebugLog::Log(DebugLog::ConvertString(std::format(L"use Adapter:{}\n", adapterDesc.Description)));
 			// 処理を抜ける
 			break;
 		}
@@ -67,7 +67,7 @@ void DirectXDevice::Init()
 		// 指定した機能レベルでデバイスが生成出来ているかを確認する
 		if (SUCCEEDED(result)) {
 			// ログを出力
-			Debug::Log(std::format("FeatureLevel : {}\n", featureLevelStriings[i]));
+			DebugLog::Log(std::format("FeatureLevel : {}\n", featureLevelStriings[i]));
 			// 生成できていればループ処理を抜ける
 			break;
 		}
@@ -76,7 +76,7 @@ void DirectXDevice::Init()
 	// デバイスを生成出来なかった場合は起動しない
 	assert(device_ != nullptr);
 	// 初期化完了のログを出す
-	Debug::Log("Complete Create D3D12Device!!!\n");
+	DebugLog::Log("Complete Create D3D12Device!!!\n");
 
 #ifdef _DEBUG // デバッグ時のみ有効
 	// デバックでの実行時、エラーが出た場合警告を出す
